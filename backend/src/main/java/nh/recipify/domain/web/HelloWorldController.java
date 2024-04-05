@@ -1,15 +1,19 @@
 package nh.recipify.domain.web;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
 public class HelloWorldController {
 
-    /*
-     TODO
+    @GetMapping(value = "/hello")
+    String hello() {
+        return "hello-world";
+    }
 
-     /hello Mapping für hello-world
-     /hello-world-Mapping mit headers=HX-Request
-       Antwort z.B. hello-response :: response
-     */
+
+    @GetMapping(value = "/hello-world", headers = "HX-Request")
+    String helloWorldResponse() {
+        return "hello-response :: response";
+    }
 }

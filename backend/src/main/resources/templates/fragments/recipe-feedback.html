@@ -9,6 +9,7 @@
           hx-trigger="load"
           th:hx-get="@{'/recipes/' + ${recipeId} + '/feedback'(slowdown=1200)}"
           hx-swap="innerHTML"
+          hx-indicator="#feedbackListIndicator"
         >
           <!-- Initial Feedback List: intentionally empty -->
         </div>
@@ -21,6 +22,11 @@
          - wichtig: das Element wird mit einer zusätzlichen CSS-Klasse versehen,
             es verschwindet aber nicht (nur optisch)
         -->
+        <div
+            id="feedbackListIndicator"
+            class="Spinner"
+            th:insert="~{::FeedbackLoadingIndicator}"
+        />
       </div>
     </th:block>
 

@@ -1,8 +1,11 @@
 <!doctype html>
 <html lang="en">
   <body>
-    <!-- todo -->
-    <!-- div mit hx-trigger click auf get /hello-world -->
+    <div hx-get="/hello-world" hx-trigger="click" hx-target="#result">
+      Get Greeting
+    </div>
+
+    <div id="result"></div>
 
     <script
       type="text/javascript"
