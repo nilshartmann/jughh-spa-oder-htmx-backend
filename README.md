@@ -1,6 +1,6 @@
 # Recipify: Frontend Demo
 
-This is a sample application for various frontend technologies.
+This is a sample application for various frontend technologies (React SPA and HTMX).
 
 ![Screenshot of example application](screenshot.png)
 
@@ -10,6 +10,7 @@ This is a sample application for various frontend technologies.
 
 - Java (JDK21), Spring Boot 3.2
 - Postgres 16
+- Spring WebMVC and Thymeleaf for HTMX "backend"
 
 **Frontend (Single-Page-App)**
 
@@ -63,6 +64,10 @@ pnpm dev
 ```
 
 The frontend runs on http://localhost:8090
+
+## A note on the component and folder structure
+
+The component and folder structure in the projects is not "best practice". It is somehow more complicated that it would be in a real application. Instead of real world applicatoin structure I decided to structure folders, files and components so that it is almost possible to compare the individual files from the different architectures. Also I made some compromises to have a basis for my live coding and workshop excercies.
 
 ## A note on the content
 
